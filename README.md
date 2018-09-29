@@ -1,5 +1,5 @@
 # Project3
-Final project for the KU coding bootcamp
+Final project for the KU coding bootcamp. 
 
 # Technologies Used <br>
 -React <br>
@@ -9,3 +9,6 @@ Final project for the KU coding bootcamp
 -CSS <br>
 -Javascript
 
+# Created by
+Jacqueline Kolze <br>
+Savannah Niemeyer
