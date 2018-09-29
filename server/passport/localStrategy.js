@@ -1,9 +1,11 @@
+// Const's
 const User = require('../database/models/user')
 const LocalStrategy = require('passport-local').Strategy
 
+// Passport username stuff
 const strategy = new LocalStrategy(
 	{
-		usernameField: 'username' // not necessary, DEFAULT
+		usernameField: 'username' 
 	},
 	function(username, password, done) {
 		User.findOne({ username: username }, (err, user) => {
@@ -20,5 +22,5 @@ const strategy = new LocalStrategy(
 		})
 	}
 )
-
+// Exports
 module.exports = strategy
