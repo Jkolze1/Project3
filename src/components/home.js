@@ -12,12 +12,12 @@ class Home extends Component {
         }
         return (
             <div>
-                <p>It's good to be home</p>
+                <p>Home page</p>
                 <img style={imageStyle} src="https://i.ytimg.com/vi/N1icEHtgb3g/maxresdefault.jpg" />
             </div>
         )
 
     }
 }
-
+// Export home
 export default Home
