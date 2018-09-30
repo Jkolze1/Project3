@@ -1,33 +1,31 @@
-// Const's
 const passport = require('passport')
 const LocalStrategy = require('./localStrategy')
-const User = require('../database/models/user')
+// const GoogleStratgey = require('./googleStrategy')
+const User = require('../db/models/user')
 
-// Saves the id, req.session.passport.user = {id:'..'}
 passport.serializeUser((user, done) => {
-	console.log('*** serializeUser called, user: ')
-	console.log(user) // the whole raw user object!
-	console.log('---------')
-	done(null, { _id: user._id })
+  console.log('=== serialize ... called ===')
+  console.log(user) // the whole raw user object!
+  console.log('---------')
+  done(null, { _id: user._id })
 })
 
-// User object attaches to the request as req.user
 passport.deserializeUser((id, done) => {
-	console.log('DeserializeUser called')
-	User.findOne(
-		{ _id: id },
-		'username',
-		(err, user) => {
-			console.log('*** Deserialize user, user:')
-			console.log(user)
-			console.log('--------------')
-			done(null, user)
-		}
-	)
+  console.log('Deserialize ... called')
+  User.findOne(
+    { _id: id },
+    'firstName lastName photos local.username',
+    (err, user) => {
+      console.log('======= DESERILAIZE USER CALLED ======')
+      console.log(user)
+      console.log('--------------')
+      done(null, user)
+    }
+  )
 })
 
-//  Use Strategies 
+// ==== Register Strategies ====
 passport.use(LocalStrategy)
+// passport.use(GoogleStratgey)
 
-// Exports
 module.exports = passport

@@ -1,82 +1,138 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
 import { Route, Link } from 'react-router-dom'
-// components
-import Signup from './components/sign-up'
-import LoginForm from './components/login-form'
-import Navbar from './components/navbar'
-import Home from './components/home'
+import './App.css'
+import LoginForm from './components/Login/LoginForm'
+import SignupForm from './components/SignupForm'
+import Header from './components/Header'
+import Home from './components/Home'
+
+const DisplayLinks = props => {
+  if (props.loggedIn) {
+    return (
+      <nav className="navbar">
+        <ul className="nav">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="#" className="nav-link" onClick={props._logout}>
+              Logout
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    )
+  } else {
+    return (
+      <nav className="navbar">
+        <ul className="nav">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/signup" className="nav-link">
+              Sign up
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    )
+  }
+}
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      loggedIn: false,
-      username: null
-    }
-
-    this.getUser = this.getUser.bind(this)
-    this.componentDidMount = this.componentDidMount.bind(this)
-    this.updateUser = this.updateUser.bind(this)
+  state = {
+    loggedIn: false,
+    user: null
   }
 
   componentDidMount() {
-    this.getUser()
-  }
-
-  updateUser (userObject) {
-    this.setState(userObject)
-  }
-
-  getUser() {
-    axios.get('/user/').then(response => {
-      console.log('Get user response: ')
+    axios.get('/auth/user').then(response => {
       console.log(response.data)
-      if (response.data.user) {
-        console.log('Get User: There is a user saved in the server session: ')
-
+      if (!!response.data.user) {
+        console.log('THERE IS A USER')
         this.setState({
           loggedIn: true,
-          username: response.data.user.username
+          user: response.data.user
         })
       } else {
-        console.log('Get user: no user');
         this.setState({
           loggedIn: false,
-          username: null
+          user: null
+        })
+      }
+    })
+  }
+
+  _logout = (event) => {
+    event.preventDefault()
+    console.log('logging out')
+
+    axios.post('/auth/logout').then(response => {
+      console.log(response.data)
+      if (response.status === 200) {
+        this.setState({
+          loggedIn: false,
+          user: null
+        })
+      }
+    })
+  }
+
+  _login = (username, password) => {
+    axios
+    .post('/auth/login', {
+      username,
+      password
+    })
+    .then(response => {
+      console.log(response)
+      if (response.status === 200) {
+        // update the state
+        this.setState({
+          loggedIn: true,
+          user: response.data.user
         })
       }
     })
   }
 
   render() {
+    const {
+      loggedIn,
+      user
+    } = this.state
+
     return (
       <div className="App">
-   
-        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {/* greet user if logged in: */}
-        {this.state.loggedIn &&
-          <p>Join the party, {this.state.username}!</p>
-        }
-        {/* Routes to different components */}
+        <h1></h1>
+        <Header user={user} />
+        {/* LINKS to our different 'pages' */}
+        <DisplayLinks _logout={this._logout} loggedIn={loggedIn} />
+        {/*  ROUTES */}
+        <Route exact path="/" render={() => <Home user={user} />} />
         <Route
-          exact path="/"
-          component={Home} />
-        <Route
+          exact
           path="/login"
           render={() =>
             <LoginForm
-              updateUser={this.updateUser}
+              _login={this._login}
+              _googleSignin={this._googleSignin}
             />}
         />
-        <Route
-          path="/signup"
-          render={() =>
-            <Signup/>}
-        />
-
+        <Route exact path="/signup" component={SignupForm} />
       </div>
-    );
+    )
   }
 }
 
