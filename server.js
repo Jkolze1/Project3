@@ -31,7 +31,13 @@ app.use(
 		resave: false, 
 		saveUninitialized: false 
 	})
-)
+);
+
+// Mongo, mLab
+const uri = 'mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr';
+mongoose.connect('mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr');
+var db = mongoose.connection;
+
 // Sign up
 app.use( (req, res, next) => {
 	console.log('req.session', req.session);
