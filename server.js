@@ -2,13 +2,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const session = require('express-session')
-const dbConnection = require('./database') 
+const dbConnection = require('./database');
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
-const app = express()
+const app = express();
+
 
 // Port
-const PORT = 8080
+const PORT = 3000;
 
 // Route requires
 const user = require('./routes/user')
@@ -31,14 +32,28 @@ app.use(
 		saveUninitialized: false 
 	})
 )
+// Sign up
+app.use( (req, res, next) => {
+	console.log('req.session', req.session);
+	next()
+  });
+  app.post('/user', (req, res) => {
+	console.log('user signup');
+	req.session.username = req.body.username;
+	res.end()
+  })
 
+  
 // Passport
 app.use(passport.initialize())
 app.use(passport.session()) 
 
+// Vars
+var yelp = require('./routes/yelp');
 
 // Routes
-app.use('/user', user)
+app.use('/user', user);
+app.use('/yelp', yelp);
 
 // Starting Server 
 app.listen(PORT, () => {

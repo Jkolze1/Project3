@@ -38,7 +38,6 @@ userSchema.pre('save', function (next) {
 // Link to source that helped with this https://www.sitepoint.com/local-authentication-using-passport-node-js/
 // To bring up database copy and past use MyDatabase;
 
-
 const User = mongoose.model('User', userSchema);
 
 // Export
