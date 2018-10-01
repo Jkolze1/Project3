@@ -1,13 +1,11 @@
-// Connect to Mongo DB
-const mongoose = require('mongoose');
+//Connect to Mongo database
+const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
+//your local database url
 //27017 is the default mongoDB port
-const uri = 'mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr'
-// Should look like this mongodb://trekitout:trekitout@ds129422.mlab.com:29422/heroku_b2rft21n'
-mongoose.connect('mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr');
-mongoose.Promise = Promise;
-var db = mongoose.connection;
+const uri = 'mongodb://localhost:27017/simple-mern-passport' 
+
 mongoose.connect(uri).then(
     () => { 
         /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ 
@@ -22,7 +20,5 @@ mongoose.connect(uri).then(
         }
   );
 
-// Export
-module.exports = mongoose.connection
 
-// Added cause idk
+module.exports = mongoose.connection

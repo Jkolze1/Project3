@@ -5,8 +5,15 @@ const session = require('express-session')
 const dbConnection = require('./database') 
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
-const app = express()
-const PORT = 8080
+const app = express();
+var mongoose= require('mongoose');
+var LocalStrategy= require('passport-local').Strategy;
+var mongo = require('mongodb');
+var cookieParser= require('cookie-parser');
+const PORT = 8080;
+
+
+
 // Route requires
 const user = require('./routes/user')
 
@@ -17,7 +24,7 @@ app.use(
 		extended: false
 	})
 )
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // Sessions
 app.use(
@@ -28,16 +35,47 @@ app.use(
 		saveUninitialized: false //required
 	})
 )
+// What I added to help with mongo db
+if (process.env.MONGODB_URI) {
+	mongoose.connect(process.env.MONGODB_URI)
+  } else {
+	mongoose.connect('mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr');
+  }
+  
+  //local db
+  // mongoose.connect('mongodb://localhost/local host name');
+  
+  //mlab uri - mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr
+  mongoose.connect('mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr');
+  
+  // Init mongodb
+  mongoose.Promise = Promise;
+  var db = mongoose.connection;
+  
+  // Show any Mongoose errors
+  db.on("error", function(error) {
+	console.log("Mongoose Error: ", error);
+  });
+  
+  // Once logged in to the db through mongoose, log a success message
+  db.once("open", function() {
+	console.log("Mongoose connection successful.");
+  });
+  
+
+
+
+// End of what I added
 
 // Passport
-app.use(passport.initialize())
-app.use(passport.session()) // calls the deserializeUser
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 // Routes
-app.use('/user', user)
+app.use('/user', user);
 
 // Starting Server 
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`)
-})
+});

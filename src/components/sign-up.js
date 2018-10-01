@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-// Sign up stuff
+
 class Signup extends Component {
 	constructor() {
 		super()
 		this.state = {
 			username: '',
 			password: '',
-			// Double checks password matches original
 			confirmPassword: '',
 
 		}
@@ -46,7 +45,7 @@ class Signup extends Component {
 			})
 	}
 
-// Page stuff
+
 render() {
 	return (
 		<div className="SignupForm">
@@ -95,5 +94,5 @@ render() {
 	)
 }
 }
-// Export signup
+
 export default Signup

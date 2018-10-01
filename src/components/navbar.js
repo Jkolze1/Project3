@@ -10,7 +10,7 @@ class Navbar extends Component {
         super()
         this.logout = this.logout.bind(this)
     }
-// Logout Info
+
     logout(event) {
         event.preventDefault()
         console.log('logging out')
@@ -46,13 +46,13 @@ class Navbar extends Component {
                         ) : (
                                 <section className="navbar-section">
                                     <Link to="/" className="btn btn-link text-secondary">
-                                        <span className="text-secondary">Home</span>
+                                        <span className="text-secondary">home</span>
                                         </Link>
                                     <Link to="/login" className="btn btn-link text-secondary">
-                                    <span className="text-secondary">Login</span>
+                                    <span className="text-secondary">login</span>
 				</Link>
                                     <Link to="/signup" className="btn btn-link">
-                                    <span className="text-secondary">Sign up</span>
+                                    <span className="text-secondary">sign up</span>
 				</Link>
                                 </section>
                             )}
@@ -60,7 +60,7 @@ class Navbar extends Component {
                     <div className="col-4 col-mr-auto">
                     <div id="top-filler"></div>
                         <img src={logo} className="App-logo" alt="logo" />
-                        <h1 className="App-title">App Name</h1>
+                        <h1 className="App-title">MERN Passport</h1>
                     </div>
                 </header>
             </div>
@@ -69,5 +69,5 @@ class Navbar extends Component {
 
     }
 }
-// Export Navbar
+
 export default Navbar
