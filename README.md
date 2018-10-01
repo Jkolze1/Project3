@@ -14,5 +14,5 @@ Jacqueline Kolze <br>
 Savannah Niemeyer
 
 # Links
-https://fitnessfinder.herokuapp.com
+https://fitnessfinder.herokuapp.com <br>
 https://jkolze1.github.io/Project3/
