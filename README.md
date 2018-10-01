@@ -12,3 +12,6 @@ Final project for the KU coding bootcamp.
 # Created by
 Jacqueline Kolze <br>
 Savannah Niemeyer
+
+# Link
+https://fitnessfinder.herokuapp.com
