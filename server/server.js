@@ -10,9 +10,7 @@ var mongoose= require('mongoose');
 var LocalStrategy= require('passport-local').Strategy;
 var mongo = require('mongodb');
 var cookieParser= require('cookie-parser');
-const PORT = 8080;
-
-
+const PORT = 3000;
 
 // Route requires
 const user = require('./routes/user')
@@ -62,10 +60,6 @@ if (process.env.MONGODB_URI) {
 	console.log("Mongoose connection successful.");
   });
   
-
-
-
-// End of what I added
 
 // Passport
 app.use(passport.initialize());
