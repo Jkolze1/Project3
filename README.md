@@ -7,7 +7,13 @@ Final project for the KU coding bootcamp.
 -Express <br>
 -HTML5 <br>
 -CSS <br>
--Javascript
+-Javascript <br>
+-Mongo <br><br>
+
+# New Technologies
+-Mlab <br>
+-Brycpt<br>
+-Passport<br>
 
 # Created by
 Jacqueline Kolze <br>
