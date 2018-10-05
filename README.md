@@ -25,3 +25,15 @@ https://jkolze1.github.io/Project3/
 
 ## Process
 ![Splash Page](/public/assets/images/mockups/SplashPage.png "Splash Page")
+
+![Splash Page](/public/assets/images/mockups/SignUpSignIn.png "Splash Page")
+
+![Splash Page](/public/assets/images/mockups/SignUpPage.png "Splash Page")
+
+![Splash Page](/public/assets/images/mockups/UserHome.png "Splash Page")
+
+![Splash Page](/public/assets/images/mockups/FindEvents.png "Splash Page")
+
+![Splash Page](/public/assets/images/mockups/Connect.png "Splash Page")
+
+![Splash Page](/public/assets/images/mockups/Maps.png "Splash Page")
