@@ -30,7 +30,7 @@ https://jkolze1.github.io/Project3/
 
 ![Splash Page](/public/assets/images/mockups/SignUpPage.png "Splash Page")
 
-![Splash Page](/public/assets/images/mockups/UserHome.png "Splash Page")
+![Splash Page](/public/assets/images/mockups/Userhome.png "Splash Page")
 
 ![Splash Page](/public/assets/images/mockups/FindEvents.png "Splash Page")
 
