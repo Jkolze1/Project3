@@ -24,9 +24,9 @@ https://fitnessfinder.herokuapp.com <br>
 https://jkolze1.github.io/Project3/
 
 ## Process
-Some rough digital mockups of layout essentials:
+###### Some rough digital mockups of layout essentials:
 ![Splash Page](/public/assets/images/mockups/SplashPage.png "Splash Page")
-This is the first page a user sees when they open the app. Logo with high res photo in background. This page will have a timeout set for a few seconds when the app loads. 
+######  This is the first page a user sees when they open the app. Logo with high res photo in background. This page will have a timeout set for a few seconds when the app loads. 
 
 ![Sign Up or Sign In](/public/assets/images/mockups/SignUpSignIn.png "Sign Up or Sign In")
 ###### The first page that opens gives the user options to sign up or log in. Users can log in with their email or via facebook.
