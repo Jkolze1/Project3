@@ -2,22 +2,22 @@
 Final project for the KU coding bootcamp. 
 
 # Technologies Used <br>
--React <br>
--Node <br>
--Express <br>
--HTML5 <br>
--CSS <br>
--Javascript <br>
--Mongo <br><br>
+* React <br>
+* Node <br>
+* Express <br>
+* HTML5 <br>
+* CSS <br>
+* Javascript <br>
+* Mongo <br><br>
 
 # New Technologies
--Mlab <br>
--Brycpt<br>
--Passport<br>
+* Mlab <br>
+* Brycpt<br>
+* Passport<br>
 
 # Created by
-Jacqueline Kolze <br>
-Savannah Niemeyer
+Jacqueline Kolze [GitHub](https://github.com/Jkolze1) <br>
+Savannah Niemeyer [GitHub](https://github.com/sniemeyer1)
 
 # Links
 https://fitnessfinder.herokuapp.com <br>
@@ -29,19 +29,19 @@ Some rough digital mockups of layout essentials:
 This is the first page a user sees when they open the app. Logo with high res photo in background. This page will have a timeout set for a few seconds when the app loads. 
 
 ![Sign Up or Sign In](/public/assets/images/mockups/SignUpSignIn.png "Sign Up or Sign In")
-The first page that opens gives the user options to sign up or log in. Users can log in with their email or via facebook.
+###### The first page that opens gives the user options to sign up or log in. Users can log in with their email or via facebook.
 
 ![Sign Up](/public/assets/images/mockups/SignUpPage.png "Sign Up")
-Sign up redirects here. User will input their info into a form to create an account. 
+###### Sign up redirects here. User will input their info into a form to create an account. 
 
 ![Home](/public/assets/images/mockups/Userhome.png "User Home")
-After sign in, the user is directed here. The home button on the bottom nav bar will also redirect here. The nav bar at the bottom includes buttons that link to Home, Events, Connect, and Maps. This page displays the user's profile as well as links to modals that show the users "favorited" places/groups/events. 
+###### After sign in, the user is directed here. The home button on the bottom nav bar will also redirect here. The nav bar at the bottom includes buttons that link to Home, Events, Connect, and Maps. This page displays the user's profile as well as links to modals that show the users "favorited" places/groups/events. 
 
 ![Find Events](/public/assets/images/mockups/FindEvents.png "Find Events")
-Events button will redirect here. Users can search for upcoming local events with parameters via Active.com's API, and a modal will display results. Users can then save events in which they are interested in their favorites database.
+###### Events button will redirect here. Users can search for upcoming local events with parameters via Active.com's API, and a modal will display results. Users can then save events in which they are interested in their favorites database.
 
 ![Connect](/public/assets/images/mockups/Connect.png "Connect")
-Connect button will redirect here. Users can search for fitness clubs or groups using Meetup's API. Search results will appear in a modal. Users can save their favorites to their favorites database. 
+###### Connect button will redirect here. Users can search for fitness clubs or groups using Meetup's API. Search results will appear in a modal. Users can save their favorites to their favorites database. 
 
 ![Maps of Local Parks](/public/assets/images/mockups/Maps.png "Maps")
-Map button will redirect here. Once location parameter is entered (or hometown is checked), a modal will display with a map, using Google Maps API. Users can save their favorite places to their personal database. 
+###### Map button will redirect here. Once location parameter is entered (or hometown is checked), a modal will display with a map, using Google Maps API. Users can save their favorite places to their personal database. 
