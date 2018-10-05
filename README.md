@@ -24,4 +24,4 @@ https://fitnessfinder.herokuapp.com <br>
 https://jkolze1.github.io/Project3/
 
 ## Process
-![Splash Page](/mockups/SplashPage.png "Splash Page")
+![Splash Page](/public/assets/images/mockups/SplashPage.png "Splash Page")
