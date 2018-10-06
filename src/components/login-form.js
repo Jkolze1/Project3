@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
+
 class LoginForm extends Component {
     constructor() {
         super()
@@ -51,6 +52,8 @@ class LoginForm extends Component {
             })
     }
 
+  
+
     render() {
         if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
@@ -96,10 +99,13 @@ class LoginForm extends Component {
                                 onClick={this.handleSubmit}
                                 type="submit">Login</button>
                         </div>
+                        
                     </form>
-                </div>
+                    
+          </div>
             )
         }
+        
     }
 }
 
