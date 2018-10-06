@@ -8,7 +8,9 @@ Final project for the KU coding bootcamp.
 * HTML5 <br>
 * CSS <br>
 * Javascript <br>
-* Mongo <br><br>
+* Mongo <br>
+* Connect-Flash
+<br>
 
 # New Technologies
 * Mlab <br>
