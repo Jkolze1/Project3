@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const User = require('../models/user')
+const User = require('../database/models/user')
 const passport = require('../passport')
 
 router.post('/', (req, res) => {
@@ -65,17 +65,4 @@ router.post('/logout', (req, res) => {
     }
 })
 
-// Facebook 10/06
-// FACEBOOK ROUTES =====================
-	// =====================================
-	// route for facebook authentication and login
-	app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
-
-	// handle the callback after facebook has authenticated the user
-	app.get('/auth/facebook/callback',
-		passport.authenticate('facebook', {
-			successRedirect : '/profile',
-			failureRedirect : '/'
-		}));
-
-module.exports = router
+module.exports = router;
