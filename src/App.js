@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Route, Link } from 'react-router-dom'
 // components
-import Signup from './components/sign-up'
+import Signup from './components/Sign-Up'
 import LoginForm from './components/login-form'
 import Navbar from './components/navbar'
-import Home from './components/home'
+import Home from './components/Home'
 
 class App extends Component {
   constructor() {
