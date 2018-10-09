@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-export default class FavoritePlaces extends Component {
+class FavoritePlaces extends Component {
   render() {
     return <div />;
   }
 }
+
+export default FavoritePlaces;
