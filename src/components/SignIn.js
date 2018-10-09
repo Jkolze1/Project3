@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class EventsModal extends Component {
+export default class SignIn extends Component {
   render() {
     return <div />;
   }
