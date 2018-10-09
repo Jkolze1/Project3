@@ -19,8 +19,8 @@ Final project for the KU coding bootcamp.
 * Reactstrap <br>
 
 # Created by
-Jacqueline Kolze [GitHub](https://github.com/Jkolze1) <br>
-Savannah Niemeyer [GitHub](https://github.com/sniemeyer1)
+Jacqueline Kolze (Back end) [GitHub](https://github.com/Jkolze1) <br>
+Savannah Niemeyer (Front end) [GitHub](https://github.com/sniemeyer1)
 
 # Links
 https://fitnessfinder.herokuapp.com <br>
