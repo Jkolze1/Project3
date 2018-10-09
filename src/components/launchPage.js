@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-export default class LaunchPage extends Component {
+class LaunchPage extends Component {
   render() {
     return <div />;
   }
 }
+
+export default LaunchPage;

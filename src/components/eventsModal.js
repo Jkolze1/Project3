@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-export default class EventsModal extends Component {
+class EventsModal extends Component {
   render() {
     return <div />;
   }
 }
+
+export default EventsModal;
