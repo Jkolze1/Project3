@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-export default class PlacesModal extends Component {
+class PlacesModal extends Component {
   render() {
     return <div />;
   }
 }
+
+export default PlacesModal;
