@@ -20,7 +20,7 @@ class Events extends Component {
     const { event, location } = this.state;
     return (
       <div className="card mb-3">
-        <div className="className card-header">Find Events</div>
+        <div className="className card-header">Find Upcoming Events</div>
         <div className="div className card-body">
           <form onSubmit={this.onSubmit}>
             <div className="form-group">
