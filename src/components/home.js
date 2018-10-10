@@ -11,7 +11,7 @@ class Home extends Component {
     };
     return (
       <div>
-        <p>It's good to be H ome</p>
+        <p>It's good to be Home</p>
         <img
           style={imageStyle}
           src="https://i.ytimg.com/vi/N1icEHtgb3g/maxresdefault.jpg"
