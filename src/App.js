@@ -6,6 +6,7 @@ import Signup from './components/SignUp';
 import LoginForm from './components/login-form';
 import Navbar from './components/navbar';
 import Home from './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Events from './components/Events';
 import EventsModal from './components/EventsModal';
