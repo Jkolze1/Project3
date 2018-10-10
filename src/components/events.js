@@ -40,7 +40,7 @@ class Events extends Component {
                 type="text"
                 name="location"
                 className="form-control form-control-lg"
-                placeholder="Enter Email..."
+                placeholder="Enter Location..."
                 value={location}
                 onChange={this.onChange}
               />
