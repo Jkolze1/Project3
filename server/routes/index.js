@@ -1,3 +1,4 @@
+// This lets passport run, DO NOT TOUCH
 module.exports = function(passport){
  
   /* GET login page. */
