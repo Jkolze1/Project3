@@ -1,8 +1,8 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const morgan = require('morgan')
-const session = require('express-session')
-const dbConnection = require('./database') 
+const express = require('express');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const session = require('express-session');
+const dbConnection = require('./database');
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 const app = express();
@@ -15,7 +15,14 @@ var cookieParser= require('cookie-parser');
 var PORT = process.env.PORT || 3000;
 
 // Route requires
-const user = require('./routes/user')
+
+
+const user = require('./routes/user');
+
+const yelp = require('./routes/yelp');
+
+
+
 
 // MIDDLEWARE
 app.use(morgan('dev'))
@@ -25,6 +32,7 @@ app.use(
 	})
 )
 app.use(bodyParser.json());
+
 
 // Sessions
 app.use(
@@ -68,8 +76,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-// Routes
+// Routes 
 app.use('/user', user);
+
+// Yelp route
+app.use('/yelp', yelp);
+
+
+
+
 
 // Starting Server 
 app.listen(PORT, () => {

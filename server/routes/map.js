@@ -1,8 +1,24 @@
-// Google Maps
-var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
+// Google React Maps js stuff
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+
+export class MapContainer extends Component {
+  render() {
+    return (
+      <Map google={this.props.google} zoom={14}>
+
+        <Marker onClick={this.onMarkerClick}
+                name={'Current location'} />
+
+        <InfoWindow onClose={this.onInfoWindowClose}>
+            <div>
+              <h1>{this.state.selectedPlace.name}</h1>
+            </div>
+        </InfoWindow>
+      </Map>
+    );
+  }
+}
+
+export default GoogleApiWrapper({
+  apiKey: (AIzaSyBWAEPI5EcGeBUheml4w2W0et_TcCiJVZo)
+})(MapContainer)

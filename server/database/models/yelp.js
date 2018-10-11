@@ -1,11 +1,13 @@
 // Yelp API
 var express = require('express');
 var router = express.Router();
-const yelp = require('yelp-fusion');
+
+const client = yelp.client('sIC9fCJBajA6KYwcedK_sQ');
+ 
 
 'use strict';
  
-
+const yelp = require('yelp-fusion');
 const token ='J9atlk5PR3rnr8sSGYLZIOoGIt9tv9bh84TsOUA_PkcOrZOzl7LaRu7CiHpsK4IeIPTVdTALaaXLUgyWQ2xcwg6n7oZ5fZc3p3ABjriHQqdBgp18UV2rF7CQedevW3Yx';
 
 const client = yelp.client(token);
