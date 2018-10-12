@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FooterNav from './FooterNav';
+import girlrunning from '../girlrunning.png';
 
 class Home extends Component {
   constructor() {
@@ -12,11 +14,11 @@ class Home extends Component {
     return (
       <div>
         <p>It's good to be H ome</p>
-        <img
-          style={imageStyle}
-          src="https://i.ytimg.com/vi/N1icEHtgb3g/maxresdefault.jpg"
-          alt="the shire"
-        />
+        <div>
+          <img src={girlrunning} width="100%" />
+        </div>
+
+        <FooterNav />
       </div>
     );
   }

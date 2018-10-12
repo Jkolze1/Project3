@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // components
 import Signup from './components/SignUp';
 import LoginForm from './components/login-form';
 import Navbar from './components/navbar';
 import Home from './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Events from './components/Events';
-import EventsModal from './components/EventsModal';
-import FavoriteEvents from './components/FavoriteEvents';
-import FavoriteMeetup from './components/FavoriteMeetup';
-import FavoritePlaces from './components/FavoritePlaces';
-import LaunchPage from './components/LaunchPage';
-import MeetUp from './components/MeetUp';
-import MeetUpModal from './components/MeetUpModal';
-import Places from './components/Places';
-import PlacesModal from './components/PlacesModal';
-import SignIn from './components/SignIn';
+// import Events from './components/Events';
+// import EventsModal from './components/EventsModal';
+// import FavoriteEvents from './components/FavoriteEvents';
+// import FavoriteMeetup from './components/FavoriteMeetup';
+// import FavoritePlaces from './components/FavoritePlaces';
+// import LaunchPage from './components/LaunchPage';
+// import MeetUp from './components/MeetUp';
+// import MeetUpModal from './components/MeetUpModal';
+// import Places from './components/Places';
+// import PlacesModal from './components/PlacesModal';
+// import SignIn from './components/SignIn';
 
 class App extends Component {
   constructor() {
@@ -63,7 +64,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container-fluid">
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
