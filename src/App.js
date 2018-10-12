@@ -17,9 +17,9 @@ import './App.css';
 
 import Events from './components/Events';
 // import EventsModal from './components/EventsModal';
-// import FavoriteEvents from './components/FavoriteEvents';
-// import FavoriteMeetup from './components/FavoriteMeetup';
-// import FavoritePlaces from './components/FavoritePlaces';
+import FavoriteEvents from './components/FavoriteEvents';
+import FavoriteMeetUp from './components/FavoriteMeetup';
+import FavoritePlaces from './components/FavoritePlaces';
 // import LaunchPage from './components/LaunchPage';
 import MeetUp from './components/MeetUp';
 // import MeetUpModal from './components/MeetUpModal';
@@ -77,19 +77,17 @@ class App extends Component {
           {/* greet user if logged in: */}
           {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
           {/* Routes to different components */}
-          <div className="paddedDiv">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route
-                path="/login"
-                render={() => <LoginForm updateUser={this.updateUser} />}
-              />
-              <Route path="/signup" render={() => <Signup />} />
-              <Route exact path="/events" component={Events} />
-              <Route exact path="/places" component={Places} />
-              <Route exact path="/meetup" component={MeetUp} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route
+              path="/login"
+              render={() => <LoginForm updateUser={this.updateUser} />}
+            />
+            <Route path="/signup" render={() => <Signup />} />
+            <Route exact path="/events" component={Events} />
+            <Route exact path="/places" component={Places} />
+            <Route exact path="/meetup" component={MeetUp} />
+          </Switch>
           <FooterNav />
         </div>
       </Router>

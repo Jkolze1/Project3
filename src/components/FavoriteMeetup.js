@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FavoriteMeetup extends Component {
-  render() {
-    return <div />;
-  }
-}
-
-export default FavoriteMeetup;
+export default () => {
+  return (
+    <div>
+      <h1>Your Saved Groups</h1>
+      <div className="savedGroups" />
+    </div>
+  );
+};
