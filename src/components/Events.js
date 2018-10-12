@@ -45,6 +45,12 @@ export default () => {
           Search
         </Button>
       </Form>
+      <div>
+        <Button>
+          <i class="fas fa-heart" />
+          See Saved Events
+        </Button>
+      </div>
     </Container>
   );
 };

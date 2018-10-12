@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import FooterNav from './FooterNav';
-import girlrunning from '../girlrunning.png';
+import { Container, Button } from 'reactstrap';
+//import FooterNav from './FooterNav';
+//import girlrunning from '../girlrunning.png';
 import '../App.css';
-
+//<img src={girlrunning} id="girlrunning" width="100%" />
 class Home extends Component {
   constructor() {
     super();
@@ -10,11 +11,20 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <img src={girlrunning} id="girlrunning" width="100%" />
-        </div>
-      </div>
+      <Container>
+        <Button>
+          <i class="fas fa-heart" />
+          See Saved Events
+        </Button>
+        <Button>
+          <i class="fas fa-heart" />
+          See Saved Places
+        </Button>
+        <Button>
+          <i class="fas fa-heart" />
+          See Saved Groups
+        </Button>
+      </Container>
     );
   }
 }

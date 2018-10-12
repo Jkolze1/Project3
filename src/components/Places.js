@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Container,
   Col,
@@ -41,6 +41,12 @@ export default () => {
           Top parks in your area
         </Button>
       </Form>
+      <div>
+        <Button>
+          <i class="fas fa-heart" />
+          See Saved Places
+        </Button>
+      </div>
     </Container>
   );
 };
