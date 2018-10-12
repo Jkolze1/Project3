@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FooterNav from './FooterNav';
 import girlrunning from '../girlrunning.png';
+import '../App.css';
 
 class Home extends Component {
   constructor() {
@@ -8,16 +9,11 @@ class Home extends Component {
   }
 
   render() {
-    const imageStyle = {
-      width: 400
-    };
     return (
       <div>
-        <p>It's good to be H ome</p>
         <div>
-          <img src={girlrunning} width="100%" />
+          <img src={girlrunning} id="girlrunning" width="100%" />
         </div>
-
         <FooterNav />
       </div>
     );

@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+//import { Route, Link } from 'react-router-dom';
+
 // components
 import Signup from './components/SignUp';
 import LoginForm from './components/login-form';
 import Navbar from './components/navbar';
 import Home from './components/Home';
+import FooterNav from './components/FooterNav';
+
+//stylesheets
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 // import Events from './components/Events';
 // import EventsModal from './components/EventsModal';
@@ -64,18 +71,25 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App container-fluid">
-        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {/* greet user if logged in: */}
-        {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
-        {/* Routes to different components */}
-        <Route exact path="/" component={Home} />
-        <Route
-          path="/login"
-          render={() => <LoginForm updateUser={this.updateUser} />}
-        />
-        <Route path="/signup" render={() => <Signup />} />
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+          {/* greet user if logged in: */}
+          {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
+          {/* Routes to different components */}
+          <div className="paddedDiv">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route
+                path="/login"
+                render={() => <LoginForm updateUser={this.updateUser} />}
+              />
+              <Route path="/signup" render={() => <Signup />} />
+            </Switch>
+          </div>
+          <FooterNav />
+        </div>
+      </Router>
     );
   }
 }

@@ -1,0 +1,20 @@
+a:link {
+  text-align: center;
+  text-decoration: none;
+}
+body {
+  padding-top: 55px;
+  background-color: lightslategray;
+}
+.formpadding {
+  max-width: 50%;
+}
+.fixed-top {
+  color: white;
+  background-color: darkolivegreen;
+  text-align: center;
+}
+h5 {
+  padding-top: 6px;
+  padding-left: 6px;
+}

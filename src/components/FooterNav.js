@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class FooterNav extends Component {
   render() {
     return (
       <footer className="fixed-bottom footer">
         <div className="row">
-          <button type="button" class="col-3 btn-lg btn-secondary">
-            Home
-          </button>
-          <button type="button" class="col-3 btn-lg btn-warning">
-            Maps
-          </button>
-          <button type="button" class="col-3 btn-lg btn-danger">
-            Connect
-          </button>
-          <button type="button" class="col-3 btn-lg btn-success">
-            Events
-          </button>
+          <Link to="/" className="col-3 btn-primary btn-lg text-white">
+            <i class="fas fa-home" />
+          </Link>
+          <Link to="/places" className="col-3 btn-success btn-lg text-white">
+            <i class="fas fa-map-marker-alt" />
+          </Link>
+          <Link to="Meetup" className="col-3 btn-info btn-lg text-white">
+            <i class="fas fa-laugh" />
+            <i class="fas fa-laugh" />
+          </Link>
+          <Link to="events" className="col-3 btn-dark btn-lg text-white">
+            <i class="fas fa-trophy" />
+          </Link>
         </div>
       </footer>
     );

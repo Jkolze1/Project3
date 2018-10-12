@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Route, Link } from 'react-router-dom';
-import logo from '../logo.svg';
 import '../App.css';
 import axios from 'axios';
 
@@ -36,35 +35,36 @@ class Navbar extends Component {
     console.log(this.props);
 
     return (
-      <div>
-        <header className="navbar App-header" id="nav-container">
-          <div className="col-4">
-            {loggedIn ? (
-              <section className="navbar-section">
-                <Link
-                  to="#"
-                  className="btn btn-link text-secondary"
-                  onClick={this.logout}
-                >
-                  <span className="text-secondary">logout</span>
-                </Link>
-              </section>
-            ) : (
-              <section className="navbar-section">
-                <Link to="/" className="btn btn-link text-secondary">
-                  <span className="text-secondary">home</span>
-                </Link>
-                <Link to="/login" className="btn btn-link text-secondary">
-                  <span className="text-secondary">login</span>
-                </Link>
-                <Link to="/signup" className="btn btn-link">
-                  <span className="text-secondary">sign up</span>
-                </Link>
-              </section>
-            )}
+      <nav className="fixed-top">
+        {loggedIn ? (
+          <div className="row">
+            <div className="col-6" />
+            <button>
+              <Link
+                to="#"
+                className="btn-lg btn-warning col-3 text-white"
+                onClick={this.logout}
+              >
+                Log Out
+              </Link>
+            </button>
           </div>
-        </header>
-      </div>
+        ) : (
+          <div className="row">
+            <div className="col-6">
+              <span class="align-middle">
+                <h5>Welcome, Username!</h5>
+              </span>
+            </div>
+            <Link to="/login" className="col-3 btn-warning btn-sm text-white">
+              Sign In
+            </Link>
+            <Link to="/signup" className="col-3 btn-danger btn-sm text-white">
+              Sign Up
+            </Link>
+          </div>
+        )}
+      </nav>
     );
   }
 }
