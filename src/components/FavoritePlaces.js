@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FavoritePlaces extends Component {
-  render() {
-    return <div />;
-  }
-}
-
-export default FavoritePlaces;
+export default () => {
+  return (
+    <div>
+      <h1>Your Saved Places</h1>
+      <div className="savedPlaces" />
+    </div>
+  );
+};
