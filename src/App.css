@@ -14,7 +14,8 @@ body {
   background-color: darkolivegreen;
   text-align: center;
 }
-h5 {
+h5,
+h2 {
   padding-top: 6px;
   padding-left: 6px;
 }

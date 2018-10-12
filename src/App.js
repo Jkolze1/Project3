@@ -15,15 +15,15 @@ import FooterNav from './components/FooterNav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-// import Events from './components/Events';
+import Events from './components/Events';
 // import EventsModal from './components/EventsModal';
 // import FavoriteEvents from './components/FavoriteEvents';
 // import FavoriteMeetup from './components/FavoriteMeetup';
 // import FavoritePlaces from './components/FavoritePlaces';
 // import LaunchPage from './components/LaunchPage';
-// import MeetUp from './components/MeetUp';
+import MeetUp from './components/MeetUp';
 // import MeetUpModal from './components/MeetUpModal';
-// import Places from './components/Places';
+import Places from './components/Places';
 // import PlacesModal from './components/PlacesModal';
 // import SignIn from './components/SignIn';
 
@@ -85,6 +85,9 @@ class App extends Component {
                 render={() => <LoginForm updateUser={this.updateUser} />}
               />
               <Route path="/signup" render={() => <Signup />} />
+              <Route exact path="/events" component={Events} />
+              <Route exact path="/places" component={Places} />
+              <Route exact path="/meetup" component={MeetUp} />
             </Switch>
           </div>
           <FooterNav />

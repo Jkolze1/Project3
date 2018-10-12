@@ -14,7 +14,6 @@ class Home extends Component {
         <div>
           <img src={girlrunning} id="girlrunning" width="100%" />
         </div>
-        <FooterNav />
       </div>
     );
   }
