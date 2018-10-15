@@ -16,14 +16,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Events from './components/Events';
-// import EventsModal from './components/EventsModal';
-import FavoriteEvents from './components/FavoriteEvents';
-import FavoriteMeetUp from './components/FavoriteMeetup';
-import FavoritePlaces from './components/FavoritePlaces';
-// import LaunchPage from './components/LaunchPage';
 import MeetUp from './components/MeetUp';
-// import MeetUpModal from './components/MeetUpModal';
 import Places from './components/Places';
+
+// import EventsModal from './components/EventsModal';
+// import FavoriteEvents from './components/FavoriteEvents';
+// import FavoriteMeetUp from './components/FavoriteMeetup';
+// import FavoritePlaces from './components/FavoritePlaces';
+// import LaunchPage from './components/LaunchPage';
+// import MeetUpModal from './components/MeetUpModal';
+
 // import PlacesModal from './components/PlacesModal';
 // import SignIn from './components/SignIn';
 
@@ -75,7 +77,9 @@ class App extends Component {
         <div className="App">
           <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
           {/* greet user if logged in: */}
-          {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
+          {this.state.loggedIn && (
+            <h1>Welcome to the party, {this.state.username}!</h1>
+          )}
           {/* Routes to different components */}
           <Switch>
             <Route exact path="/" component={Home} />

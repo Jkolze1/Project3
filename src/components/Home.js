@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import FavoriteEvents from './FavoriteEvents';
 import FavoriteMeetUp from './FavoriteMeetup';
 import FavoritePlaces from './FavoritePlaces';
@@ -20,14 +20,14 @@ class Home extends Component {
       <Router>
         <Container>
           <Link to="/places/saved">
-            <Button>
+            <Button className="mr-2">
               <i class="fas fa-heart" />
               See Saved Places
             </Button>
           </Link>
 
           <Link to="/meetup/saved">
-            <Button>
+            <Button className="mr-2">
               <i class="fas fa-heart" />
               See Saved Groups
             </Button>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class EventsModal extends Component {
   render() {
-    return <div />;
+    return <div className="eventsResults" />;
   }
 }
 

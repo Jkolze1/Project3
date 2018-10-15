@@ -26,7 +26,7 @@ export default () => {
           </FormGroup>
         </Col>
         <Button
-          className="btn btn-primary"
+          className="btn btn-primary mr-2"
           onClick={this.handleSubmit}
           type="submit"
         >
@@ -34,19 +34,19 @@ export default () => {
         </Button>
         OR
         <Button
-          className="btn btn-primary"
+          className="btn btn-primary ml-2"
           onClick={this.handleSubmit}
           type="submit"
         >
           Top parks in your area
         </Button>
+        <div>
+          <Button className="mt-3">
+            <i class="fas fa-heart" />
+            See Saved Places
+          </Button>
+        </div>
       </Form>
-      <div>
-        <Button>
-          <i class="fas fa-heart" />
-          See Saved Places
-        </Button>
-      </div>
     </Container>
   );
 };
