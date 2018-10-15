@@ -91,7 +91,7 @@ class Signup extends Component {
               </FormGroup>
             </Col>
             <Button
-              className="btn btn-primary"
+              className="btn btn-primary ml-2"
               onClick={this.handleSubmit}
               type="submit"
             >

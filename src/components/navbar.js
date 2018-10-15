@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import { Route, Link } from 'react-router-dom';
+//import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import axios from 'axios';
 
@@ -38,24 +38,19 @@ class Navbar extends Component {
       <nav className="fixed-top">
         {loggedIn ? (
           <div className="row">
-            <div className="col-6" />
-            <button>
-              <Link
-                to="#"
-                className="btn-lg btn-warning col-3 text-white"
-                onClick={this.logout}
-              >
-                Log Out
-              </Link>
-            </button>
+            <div className="col-9" />
+
+            <Link
+              to="#"
+              className="btn-sm btn-warning col-3 text-white"
+              onClick={this.logout}
+            >
+              Log Out
+            </Link>
           </div>
         ) : (
           <div className="row">
-            <div className="col-6">
-              <span class="align-middle">
-                <h5>Welcome, Username!</h5>
-              </span>
-            </div>
+            <div className="col-6" />
             <Link to="/login" className="col-3 btn-warning btn-sm text-white">
               Sign In
             </Link>

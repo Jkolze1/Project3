@@ -4,13 +4,9 @@ a:link {
 }
 body {
   padding-top: 55px;
-  background-color: lightslategray;
 }
-.formpadding {
-  max-width: 50%;
-}
+
 .fixed-top {
-  color: white;
   background-color: darkolivegreen;
   text-align: center;
 }
@@ -18,4 +14,7 @@ h5,
 h2 {
   padding-top: 6px;
   padding-left: 6px;
+}
+h1 {
+  padding-left: 20px;
 }
