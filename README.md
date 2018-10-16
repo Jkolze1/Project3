@@ -81,16 +81,26 @@ https://jkolze1.github.io/Project3/
 
 ###### Examples of digital mockups round 2:
 
+![Sign In](/public/assets/images/mockups2/signin.png 'sign in')
+
+###### For the simple login/Sign up component, Passport is used for authentication, MongoDB to store user info, and Bcrypt to hash out sensitive materials.
+
+---
+
 ![Home](/public/assets/images/mockups2/home.png 'home')
+
+###### Buttons that redirect to search pages will display on on home page and eventually there will be a container that shows a user's favorited items. Footer buttons are available on all pages for intuitive navigation.
 
 ---
 
 ![Find Events](/public/assets/images/mockups2/findevents.png 'find events')
 
+###### A form will allow a user to search parameters and location, as well as the option to view their saved events. The meetup and places pages will have a near-identical layout.
+
 ---
 
 ![Find Places](/public/assets/images/mockups2/places.png 'places')
 
----
+###### The places page will allow a user to see the top-rated places based on Yelp.
 
-![Sign In](/public/assets/images/mockups2/findevents.png 'sign in')
+---
