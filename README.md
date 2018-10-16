@@ -17,7 +17,7 @@ Final project for the KU coding bootcamp.
 # New Technologies
 
 - Mlab <br>
-- Brycpt<br>
+- Bcrypt<br>
 - Passport<br>
 - Reactstrap <br>
 
