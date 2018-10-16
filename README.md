@@ -80,3 +80,17 @@ https://jkolze1.github.io/Project3/
 ---
 
 ###### Examples of digital mockups round 2:
+
+![Home](/public/assets/images/mockups2/home.png 'home')
+
+---
+
+![Find Events](/public/assets/images/mockups2/findevents.png 'find events')
+
+---
+
+![Find Places](/public/assets/images/mockups2/places.png 'places')
+
+---
+
+![Sign In](/public/assets/images/mockups2/findevents.png 'sign in')
