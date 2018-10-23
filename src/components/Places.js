@@ -11,6 +11,7 @@ import {
 import { Link } from 'react-router-dom';
 import FavoritePlaces from './FavoritePlaces';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import PlacesModal from './PlacesModal';
 
 const yelp = require('yelp-fusion');
 export default () => {
@@ -38,13 +39,16 @@ export default () => {
             Search
           </Button>
           OR
-          <Button
-            className="btn btn-primary ml-2"
-            onClick={this.handleSubmit}
-            type="submit"
-          >
-            Top parks in your area
-          </Button>
+          <Link to="/places/maps">
+            <Button
+              className="btn btn-primary ml-2"
+              onClick={this.renderMap}
+              type="submit"
+            >
+              Top parks in your area
+            </Button>
+          </Link>
+          <Route exact path="/places/maps" component={PlacesModal} />
           <div>
             <Link to="/places/saved">
               <Button className="mt-3">
