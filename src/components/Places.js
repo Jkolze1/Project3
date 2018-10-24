@@ -4,14 +4,12 @@ import Map from './Map.js'
 class Places extends Component {
   render() {
     return (
-      <div className="Places">
-        <header className="App-header">
-          <h1 className="App-title">Places</h1>
-        </header>
-        <Map/>
-      </div>
-    );
-  }
-}
+      <center>
+          <iframe name="gMap" width="600" height="450" src={`https://www.google.com/maps/embed/v1/search?q=parks%20near%20Overland%20Park%2C%20KS%2C%20USA&key=AIzaSyCa7GHUwBpHjfw6vohPbYh_WVr9erCd0YU`}></iframe>
+      </center>
+        )
+      }
+    }
+  
 
 export default Places;
