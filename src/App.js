@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+//import Map from './components/Map.js'
 //import { Route, Link } from 'react-router-dom';
 
 // components
@@ -93,6 +93,7 @@ class App extends Component {
             <Route exact path="/meetup" component={MeetUp} />
           </Switch>
           <FooterNav />
+          
         </div>
       </Router>
     );

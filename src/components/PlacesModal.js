@@ -1,102 +1,52 @@
-import React, { Component } from 'react';
-//import './App.css';
-import { Container } from 'reactstrap';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import axios from 'axios';
+class PlacesModal extends React.Component {
+  render() {
+    // Render nothing if the "show" prop is false
+    if (!this.props.show) {
+      return null;
+    }
 
-class PlacesModal extends Component {
-  state = {
-    venues: []
-  };
-
-  componentDidMount() {
-    this.getVenues();
-  }
-
-  renderMap = () => {
-    loadScript(
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyBnOC2cYnLyaaYXtnd_IEQWZLkqvg0tqoE&callback=initMap'
-    );
-    window.initMap = this.initMap;
-  };
-
-  getVenues = () => {
-    const endPoint = 'https://api.foursquare.com/v2/venues/explore?';
-    const parameters = {
-      client_id: '1F2OK0YKG1K1AZGUZI2CC2P205FAWDWSIRBUKQC3V0JVXIB3',
-      client_secret: 'APNEDD4CI1T2JICHRTZADKVABAGEOSVFGKI3VATCN5ATEL1Q',
-      query: 'park',
-      near: 'Overland Park, Ks',
-      v: '20182507'
+    // The gray background
+    const backdropStyle = {
+      position: 'fixed',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      backgroundColor: 'rgba(0,0,0,0.3)',
+      padding: 50
     };
 
-    axios
-      .get(endPoint + new URLSearchParams(parameters))
-      .then(response => {
-        this.setState(
-          {
-            venues: response.data.response.groups[0].items
-          },
-          this.renderMap()
-        );
-      })
-      .catch(error => {
-        console.log('ERROR!! ' + error);
-      });
-  };
+    // The modal "window"
+    const modalStyle = {
+      backgroundColor: '#fff',
+      borderRadius: 5,
+      maxWidth: 500,
+      minHeight: 300,
+      margin: '0 auto',
+      padding: 30
+    };
 
-  initMap = () => {
-    // Create A Map
-    var map = new window.google.maps.Map(document.getElementById('map'), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8
-    });
-
-    // Create An InfoWindow
-    var infowindow = new window.google.maps.InfoWindow();
-
-    // Display Dynamic Markers
-    this.state.venues.map(myVenue => {
-      var contentString = `${myVenue.venue.name}`;
-
-      // Create A Marker
-      var marker = new window.google.maps.Marker({
-        position: {
-          lat: myVenue.venue.location.lat,
-          lng: myVenue.venue.location.lng
-        },
-        map: map,
-        title: myVenue.venue.name
-      });
-
-      // Click on A Marker!
-      marker.addListener('click', function() {
-        // Change the content
-        infowindow.setContent(contentString);
-
-        // Open An InfoWindow
-        infowindow.open(map, marker);
-      });
-    });
-  };
-
-  render() {
     return (
-      <Container>
-        <h1>hello</h1>
-        <div id="map" />
-      </Container>
+      <div className="backdrop" style={backdropStyle}>
+        <div className="modal" style={modalStyle}>
+          {this.props.children}
+
+          <div className="footer">
+            <button onClick={this.props.onClose}>Close</button>
+          </div>
+        </div>
+      </div>
     );
   }
 }
 
-function loadScript(url) {
-  var index = window.document.getElementsByTagName('script')[0];
-  var script = window.document.createElement('script');
-  script.src = url;
-  script.async = true;
-  script.defer = true;
-  index.parentNode.insertBefore(script, index);
-}
+PlacesModal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  show: PropTypes.bool,
+  children: PropTypes.node
+};
 
 export default PlacesModal;
