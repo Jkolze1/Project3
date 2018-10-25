@@ -28,7 +28,7 @@ class MeetUpModal extends Component {
         <Container>
           <div>
             {items.map(item => (
-              <Card className="mt-3 p-3" key={item.id}>
+              <Card className="my-3 p-3" key={item.id}>
                 <h3>
                   <a href={item.link}>{item.name}</a>
                 </h3>
