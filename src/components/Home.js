@@ -11,9 +11,9 @@ import FavoritePlaces from './FavoritePlaces';
 import '../App.css';
 //<img src={girlrunning} id="girlrunning" width="100%" />
 class Home extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   render() {
     return (

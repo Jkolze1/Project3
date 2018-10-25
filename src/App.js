@@ -93,7 +93,6 @@ class App extends Component {
             <Route exact path="/meetup" component={MeetUp} />
           </Switch>
           <FooterNav />
-          
         </div>
       </Router>
     );

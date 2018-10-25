@@ -41,11 +41,7 @@ export default () => {
               />
             </FormGroup>
           </Col>
-          <Button
-            className="btn btn-primary"
-            onClick={this.handleSubmit}
-            type="submit"
-          >
+          <Button className="btn btn-primary" type="submit">
             Search
           </Button>
         </Form>
