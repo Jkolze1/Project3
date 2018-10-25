@@ -1,16 +1,9 @@
 import React from 'react';
-import {
-  Container,
-  Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button
-} from 'reactstrap';
+import { Container, Button } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
 import FavoriteMeetup from './FavoriteMeetup';
+import MeetUpModal from './MeetUpModal';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default () => {
@@ -18,46 +11,22 @@ export default () => {
     <Router>
       <Container className="formpadding">
         <h2>Find Fitness Friends!</h2>
-        <Form className="form">
-          <Col>
-            <FormGroup>
-              <Label>Search for Meetup Group</Label>
-              <Input
-                className="form-input"
-                type="text"
-                id="meetupsearch"
-                name="meetupsearch"
-                placeholder="i.e... 5K, triathalon"
-              />
-            </FormGroup>
-          </Col>
-          <Col>
-            <FormGroup>
-              <Label>Location</Label>
-              <Input
-                className="form-input"
-                placeholder="ex: Kansas City or 64109"
-                type="text"
-                name="location"
-              />
-            </FormGroup>
-          </Col>
-          <Button
-            className="btn btn-primary"
-            onClick={this.handleSubmit}
-            type="submit"
-          >
-            Search
+        <h5>Search for Meetup Groups in your area</h5>
+        <Link to="/meetup/results">
+          <Button className="btn btn-primary mt-2 ml-2" type="submit">
+            Go!
           </Button>
-        </Form>
+        </Link>
+
         <div>
           <Link to="/meetup/saved">
-            <Button className="mt-3">
+            <Button className="mt-3 ml-2">
               <i class="fas fa-heart" />
               See Saved Groups
             </Button>
           </Link>
         </div>
+        <Route exact path="/meetup/results" component={MeetUpModal} />
         <Route exact path="/meetup/saved" component={FavoriteMeetup} />
       </Container>
     </Router>
