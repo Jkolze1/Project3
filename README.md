@@ -1,6 +1,7 @@
 # Project3
 
-Final project for the KU coding bootcamp.
+Final project for the KU coding bootcamp.<br>
+https://fitnessfinder.herokuapp.com
 
 # Technologies Used <br>
 
@@ -11,8 +12,7 @@ Final project for the KU coding bootcamp.
 - CSS <br>
 - Javascript <br>
 - Mongo <br>
-- Connect-Flash
-  <br>
+
 
 # New Technologies
 
@@ -20,6 +20,11 @@ Final project for the KU coding bootcamp.
 - Bcrypt<br>
 - Passport<br>
 - Reactstrap <br>
+
+# API's
+-Google Maps <br>
+-Meetup API <br>
+-Eventbrite <br>
 
 # Created by
 
