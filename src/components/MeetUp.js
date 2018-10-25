@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Container,
-  Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button
-} from 'reactstrap';
+import { Container, Button } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
 import FavoriteMeetup from './FavoriteMeetup';

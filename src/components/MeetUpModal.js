@@ -1,17 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import FavoriteMeetup from './FavoriteMeetup';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import {
-  Card,
-  Container,
-  Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button
-} from 'reactstrap';
+import { Card, Container, Button } from 'reactstrap';
 
 class MeetUpModal extends Component {
   constructor(props) {
