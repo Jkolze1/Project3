@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button } from 'reactstrap';
+import { Container,FormGroup, Label, Col, Input, Button } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
 import FavoriteMeetup from './FavoriteMeetup';
@@ -12,6 +12,14 @@ export default () => {
       <Container className="formpadding">
         <h2>Find Fitness Friends!</h2>
         <h5>Search for Meetup Groups in your area</h5>
+
+        <Col md={2}>
+            <FormGroup>
+              <Label for="exampleZip">Zip</Label>
+              <Input type="text" name="zip" id="exampleZip"/>
+            </FormGroup>  
+          </Col>
+
         <Link to="/meetup/results">
           <Button className="btn btn-primary mt-2 ml-2" type="submit">
             Go!
