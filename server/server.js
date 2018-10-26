@@ -39,24 +39,33 @@ app.use(
   })
 );
 // What I added to help with mongo db
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
-} else {
-  mongoose.connect(
-    'mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr'
-  );
-}
+//if (process.env.MONGODB_URI) {
+ // mongoose.connect(process.env.MONGODB_URI);
+//} else {
+ // mongoose.connect(
+   // 'mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr'
+ // );
+//}
 
 //local db
 // mongoose.connect('mongodb://localhost/local host name');
 
 //mlab uri - mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr
-mongoose.connect(
-  'mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr'
-);
+//mongoose.connect(
+  //'mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr'
+//);
 
 // Init mongodb
-mongoose.Promise = Promise;
+//mongoose.Promise = Promise;
+
+var link = 'mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr';
+
+//Local link
+// var link = 'mongodb://localhost/nytreact';
+
+mongoose.connect(link);
+var db = mongoose.connection;
+
 var db = mongoose.connection;
 
 // Show any Mongoose errors
@@ -78,6 +87,7 @@ app.use('/user', user);
 
 // Yelp route
 app.use('/yelp', yelp);
+
 
 // Starting Server
 app.listen(PORT, () => {
