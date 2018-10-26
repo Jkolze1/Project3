@@ -7,21 +7,22 @@ import FavoriteMeetUp from './FavoriteMeetup';
 import FavoritePlaces from './FavoritePlaces';
 
 //import FooterNav from './FooterNav';
-//import girlrunning from '../girlrunning.png';
+import girlrunning from '../girlrunning.png';
 import '../App.css';
-//<img src={girlrunning} id="girlrunning" width="100%" />
 class Home extends Component {
-  // constructor() {
-  //   super();
-  // }
+  constructor() {
+    super();
+  }
 
   render() {
     return (
       <Router>
         <Container>
+          <img src={girlrunning} id="girlrunning" width="100%" />
+
           <Col>
             <Link to="/places/saved">
-              <Button className="m-2 btn-lg">
+              <Button className="mt-2 btn-sm btn-block">
                 <i class="fas fa-heart" />
                 See Saved Places
               </Button>
@@ -29,7 +30,7 @@ class Home extends Component {
           </Col>
           <Col>
             <Link to="/meetup/saved">
-              <Button className="m-2 btn-lg">
+              <Button className="mt-2 btn-sm btn-block">
                 <i class="fas fa-heart" />
                 See Saved Groups
               </Button>
@@ -37,7 +38,7 @@ class Home extends Component {
           </Col>
           <Col>
             <Link to="/events/saved">
-              <Button className="m-2 btn-lg">
+              <Button className="mt-2 btn-sm btn-block">
                 <i class="fas fa-heart" />
                 See Saved Events
               </Button>
