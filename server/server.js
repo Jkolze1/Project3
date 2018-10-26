@@ -18,7 +18,6 @@ var PORT = process.env.PORT || 3000;
 
 const user = require('./routes/user');
 
-
 // MIDDLEWARE
 app.use(morgan('dev'));
 app.use(
@@ -71,8 +70,6 @@ app.use(passport.session());
 
 // Routes
 app.use('/user', user);
-
-// Yelp route
 
 
 
