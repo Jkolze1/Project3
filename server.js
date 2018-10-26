@@ -36,24 +36,13 @@ app.use(
     saveUninitialized: false //required
   })
 );
-
-// What I added to help with mongo db
-if (process.env.MONGODB_URI) {
-	mongoose.connect(process.env.MONGODB_URI)
-  } else {
-	mongoose.connect('mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr');
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/simple-mern-passport",
+  {
+    useMongoClient: true
   }
-  
-  //local db
-  // mongoose.connect('mongodb://localhost/local host name');
-  
-  //mlab uri - mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr
-  mongoose.connect('mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr');
-  
-  // Init mongodb
-  mongoose.Promise = Promise;
-  var db = mongoose.connection;
-  
+);
+
 // Show any Mongoose errors
 db.on('error', function(error) {
   console.log('Mongoose Error: ', error);
