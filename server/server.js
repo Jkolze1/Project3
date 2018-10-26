@@ -48,8 +48,7 @@ if (process.env.MONGODB_URI) {
   // mongoose.connect('mongodb://localhost/local host name');
   
   //mlab uri - mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr
-  mongoose.connect('mongodb://fitnessfinder:fitnessfinder123@ds119853.mlab.com:19853/heroku_lc6r3nsr');
-  
+
   // Init mongodb
   mongoose.Promise = Promise;
   var db = mongoose.connection;
