@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Container,
-  FormGroup,
-  Label,
-  Col,
-  Row,
-  Input,
-  Button
-} from 'reactstrap';
+import { Container,FormGroup, Label, Col, Input, Button } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
 import FavoriteEvents from './FavoriteEvents';
@@ -20,17 +12,15 @@ export default () => {
       <Container className="formpadding">
         <h2>Find Fitness Events!</h2>
         <h5>Search for events in your area</h5>
-
-        <FormGroup className="ml-2">
-          <Row>
-            <Col className="col-md-3">
+        
+        <Col md={2}>
+            <FormGroup>
               <Label for="exampleZip">Zip</Label>
-              <Input type="text" name="zip" id="exampleZip" />
-            </Col>
-          </Row>
-        </FormGroup>
+              <Input type="text" name="zip" id="exampleZip"/>
+            </FormGroup>  
+          </Col>
 
-        <Link to="/events/results">
+          <Link to="/events/results">
           <Button className="btn btn-primary mt-2 ml-2" type="submit">
             Go!
           </Button>

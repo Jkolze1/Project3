@@ -22,7 +22,7 @@ class Home extends Component {
 
           <Col>
             <Link to="/places/saved">
-              <Button className="mt-2 btn-sm btn-block">
+            <Button className="mt-2 btn-sm btn-block">
                 <i class="fas fa-heart" />
                 See Saved Places
               </Button>
@@ -30,7 +30,7 @@ class Home extends Component {
           </Col>
           <Col>
             <Link to="/meetup/saved">
-              <Button className="mt-2 btn-sm btn-block">
+              <Button className="m-2 btn-lg">
                 <i class="fas fa-heart" />
                 See Saved Groups
               </Button>
@@ -38,7 +38,7 @@ class Home extends Component {
           </Col>
           <Col>
             <Link to="/events/saved">
-              <Button className="mt-2 btn-sm btn-block">
+              <Button className="m-2 btn-lg">
                 <i class="fas fa-heart" />
                 See Saved Events
               </Button>
