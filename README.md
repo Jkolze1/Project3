@@ -1,4 +1,4 @@
-# Project3
+# Project 3
 
 Final project for the KU coding bootcamp.<br>
 https://fitnessfinder.herokuapp.com
